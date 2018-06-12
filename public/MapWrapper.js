@@ -15,6 +15,10 @@ MapWrapper.prototype.moveTo = function(place){
     L.marker(place).addTo(this.map).bindPopup(`<a href ='https://en.wikipedia.org/wiki/Japan'>more information</a>`).openPopup()
 
 }
+
+MapWrapper.prototype.currentLocation = function () {
+  this.map.locate({setView: true})
+};
 MapWrapper.prototype.addMarker = function (coords) {
   L.marker(coords).addTo(this.map);
 

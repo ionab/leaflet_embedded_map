@@ -12,5 +12,10 @@ const drawMap = function(){
    button.addEventListener('click', function(){
        mainMap.moveTo(japan)
    });
+
+   const locationButton = document.querySelector('#location');
+    locationButton.addEventListener('click', function() {
+      mainMap.currentLocation();
+ })
 }
 window.addEventListener('load', drawMap);
