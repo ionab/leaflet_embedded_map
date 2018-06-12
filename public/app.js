@@ -1,13 +1,12 @@
 const drawMap = function(){
   const mapDiv = document.getElementById("main-map");
-  const glasgow = [55.8768712, -4.2747476];
+  const glasgow = [55.854979, -4.243281];
   const zoomLevel = 15;
-  const javaStreet = [55.801507, -4.003805]
-  const mainMap = new MapWrapper(mapDiv, javaStreet, zoomLevel);
+  const mainMap = new MapWrapper(mapDiv, glasgow, zoomLevel);
 
-  mainMap.addMarker(javaStreet);
+  mainMap.addMarker(glasgow);
 
-  const japan = [36.697376, 138.7297723]
+  const japan = [36.697376,134.2495392]
 
   const button = document.querySelector('#take-me');
    button.addEventListener('click', function(){
