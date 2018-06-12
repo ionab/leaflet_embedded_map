@@ -11,7 +11,7 @@ const MapWrapper = function(element, coords, zoom){
 }
 
 MapWrapper.prototype.moveTo = function(place){
-    this.map.flyTo(place);
+    this.map.flyTo(place, 6);
     L.marker(place).addTo(this.map).bindPopup(`<a href ='https://en.wikipedia.org/wiki/Japan'>more information</a>`).openPopup()
 
 }
