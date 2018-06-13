@@ -7,14 +7,20 @@ const drawMap = function(){
   mainMap.addMarker(glasgow);
 
   const japan = [36.697376,134.2495392]
+  //selects button from the html document
 
   const button = document.querySelector('#take-me');
-   button.addEventListener('click', function(){
-       mainMap.moveTo(japan)
-   });
+  //adds event listener to declare what to do on the button click
 
-   const locationButton = document.querySelector('#location');
-    locationButton.addEventListener('click', function() {
+  button.addEventListener('click', function(){
+       mainMap.moveTo(japan)
+  });
+  
+  //selects location button from the html doc
+  const locationButton = document.querySelector('#location');
+
+  //adds event listener and declares what to do on a button click.
+  locationButton.addEventListener('click', function() {
       mainMap.currentLocation();
  })
 }
